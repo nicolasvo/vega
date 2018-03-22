@@ -1,2 +1,2 @@
-Flask application deployed on using Docker.
+Flask application deployed using Docker.
 # vega
