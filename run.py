@@ -8,10 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    #return 'boiHello from Flask! (%s)' % datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-    #public ip
-               
     dict_rig = {}
     dict_rig_number = {2: "202",
                        3: "203",
