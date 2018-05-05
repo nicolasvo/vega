@@ -25,9 +25,9 @@ def index():
             dict_rig[x].update({"uptime": "{0}:{1:0>2}:{2:0>2}".format(int(uptime//3600), int(uptime//60%60), int(uptime%60))})
         except requests.exceptions.RequestException:
             dict_rig[x] = dict()
-            dict_rig[x].update({"avg_time": "rig down."})
-            dict_rig[x].update({"hashrate": "rig down."})
-            dict_rig[x].update({"uptime": "rig down."})
+            list_key = ["avg_time", "hashrate", "uptime"]
+            for key in list_key:
+                dict_rig[key].update({key: "rig down."})
 
     return render_template('hello.html', dict_rig=dict_rig)
 
